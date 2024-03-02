@@ -1,0 +1,58 @@
+<div class="container">
+  <form (ngSubmit)="addCard()" [formGroup]="cardForm">
+    <div class="field">
+      <label class="label">Title: </label>
+      <div class="control">
+        <input class="input" type="text" name="title" formControlName="title" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Describe</label>
+      <div class="control">
+        <input
+          type="text"
+          class="input"
+          name="description"
+          formControlName="description"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Img</label>
+      <div class="control">
+        <input
+          type="file"
+          class="input"
+          name="img"
+          formControlName="img"
+          accept="image/*,.png,.jpg,.gif,.web"
+          (change)="onFileChange($event)"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Adress</label>
+      <div class="control">
+        <input
+          type="text"
+          class="input"
+          name="adress"
+          formControlName="adress"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Price</label>
+      <div class="control">
+        <input type="text" class="input" name="price" formControlName="price" />
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="button is-primary">Додати оголошення</button>
+    </div>
+  </form>
+</div>

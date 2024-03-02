@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img
+        src="{{ 'http://127.0.0.1:8000/advertisement/image/' + card.img }}"
+        alt="Placeholder image"
+      />
+    </figure>
+  </div>
+
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{ card.title }}</p>
+        <p class="subtitle is-6">Descripton: {{ card.description }}</p>
+        <p class="subtitle is-6">{{ card.price }}</p>
+      </div>
+    </div>
+
+    <div class="content">Author: {{ card.author?.name || "No author" }}</div>
+  </div>
+</div>

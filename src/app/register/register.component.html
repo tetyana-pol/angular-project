@@ -1,0 +1,45 @@
+<div class="container">
+  <form class="box" (ngSubmit)="register()" [formGroup]="registerForm">
+    <h1 className="title">Register</h1>
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input type="text" class="input" name="name" formControlName="name" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Email </label>
+      <div class="control">
+        <input
+          class="control has-icons-left has-icons-right"
+          type="email"
+          name="email"
+          placeholder="e.g. bobsmith@gmail.com"
+          formControlName="email"
+        />
+      </div>
+    </div>
+
+    <span className="icon is-small is-left">
+      <i className="fa fa-envelope"></i>
+    </span>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input
+          type="password"
+          class="control has-icons-left has-icons-right"
+          name="password"
+          placeholder="*******"
+          formControlName="password"
+        />
+      </div>
+    </div>
+
+    <div>
+      <button type="submit" class="button is-primary">Register</button>
+    </div>
+  </form>
+</div>
